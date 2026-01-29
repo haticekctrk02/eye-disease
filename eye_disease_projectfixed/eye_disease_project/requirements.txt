@@ -1,0 +1,11 @@
+timm
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+PyQt5
+Flask
+Pillow
+tensorboard
+tqdm
