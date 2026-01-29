@@ -34,39 +34,70 @@ Sınıf etiketleri:
 
 models/classes.txt
 
-📂 Proje Dizini
 eye_disease_project/
 │
-├── train.py                # Model eğitimi
-├── eval.py                 # Model değerlendirme
-├── model.py                # CNN mimarisi
-├── check_model.py          # Model test / sanity check
-├── grad_cam.py             # Grad-CAM görselleştirme
-├── requirements.txt        # Bağımlılıklar
+├── train.py
+│   └── Modelin eğitildiği ana dosya
+│
+├── eval.py
+│   └── Eğitilmiş modelin test ve değerlendirme işlemleri
+│
+├── model.py
+│   └── CNN mimarisinin tanımlandığı dosya
+│
+├── check_model.py
+│   └── Modelin hızlı test / sanity check işlemleri
+│
+├── grad_cam.py
+│   └── Grad-CAM tabanlı açıklanabilirlik (XAI) görselleştirmeleri
+│
+├── requirements.txt
+│   └── Projede kullanılan Python bağımlılıkları
 │
 ├── models/
-│   ├── best.pth            # Eğitilmiş model
-│   └── classes.txt         # Sınıf isimleri
+│   ├── best.pth
+│   │   └── Eğitilmiş en iyi model ağırlıkları
+│   │
+│   └── classes.txt
+│       └── Modelin sınıflandırdığı hastalık sınıfları
 │
-├── data/                   # Veri seti (harici / eklenebilir)
+├── data/
+│   └── Veri seti dizini (harici olarak eklenebilir)
 │
 ├── reports/
 │   ├── classification_report.json
+│   │   └── Precision, Recall, F1-score gibi metrikler
+│   │
 │   ├── confusion_matrix.png
+│   │   └── Model performansını gösteren Confusion Matrix
+│   │
 │   └── project_report_draft.md
+│       └── Proje raporu taslağı
 │
 ├── notebooks/
-│   └── quick_start.ipynb   # Hızlı başlangıç notebook’u
+│   └── quick_start.ipynb
+│       └── Hızlı deneme ve analizler için Jupyter Notebook
 │
 └── app/
-    ├── flask_app.py        # Web arayüz (Flask)
-    ├── pyqt_app.py         # Desktop arayüz (PyQt)
+    ├── flask_app.py
+    │   └── Web tabanlı kullanıcı arayüzü (Flask)
+    │
+    ├── pyqt_app.py
+    │   └── Masaüstü uygulaması (PyQt)
+    │
     ├── templates/
     │   ├── index.html
+    │   │   └── Ana sayfa
     │   └── result.html
+    │       └── Tahmin sonuçları sayfası
+    │
     └── static/
         ├── uploads/
+        │   └── Kullanıcı tarafından yüklenen görüntüler
+        │
         └── outputs/
+            └── Grad-CAM ve model çıktı görselleri
+
 
 ⚙️ Kurulum
 1️⃣ Ortam Oluşturma
